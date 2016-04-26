@@ -100,4 +100,9 @@ class Util
         $writer->toFile($filename, $config, $exclusiveLock = true);
     }
 
+    public static function test()
+    {
+        echo 'test' . PHP_EOL;
+    }
+
 }

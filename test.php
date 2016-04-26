@@ -8,8 +8,6 @@
 
 namespace FbSmartAds;
 
-use Zend\Config\Writer\Json as WriterJson;
-
 class Util
 {
     /**
@@ -92,12 +90,6 @@ class Util
             }
         }
         return $result;
-    }
-
-    public static function writeJsonConf($filename, $config)
-    {
-        $writer = new WriterJson();
-        $writer->toFile($filename, $config, $exclusiveLock = true);
     }
 
     public static function test()

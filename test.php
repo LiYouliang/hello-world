@@ -84,9 +84,9 @@ class Util
         $result = array();
         foreach ($arr1 as $item1) {
             foreach ($arr2 as $item2) {
-                $temp     = $item1;
-                $temp[]   = $item2;
-                $result[] = $temp;
+                $tmp      = $item1;
+                $tmp[]    = $item2;
+                $result[] = $tmp;
             }
         }
         return $result;

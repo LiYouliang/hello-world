@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
+ * Created by Sublime Text.
  * User: You Liang Li
  * Date: 2016/3/16
  * Time: 16:19
@@ -101,4 +101,3 @@ class Util
     }
 
 }
-

@@ -53,45 +53,6 @@ class Util
         }
     }
 
-    /**
-     * 所有数组的笛卡尔积
-     *
-     * @return array
-     */
-    public static function combineDika()
-    {
-        $data   = func_get_args();
-        $cnt    = count($data);
-        $result = array();
-        foreach ($data[0] as $item) {
-            $result[] = array($item);
-        }
-        for ($i = 1; $i < $cnt; $i++) {
-            $result = self::combineArray($result, $data[$i]);
-        }
-        return $result;
-    }
-
-    /**
-     * 两个数组的笛卡尔积
-     *
-     * @param $arr1
-     * @param $arr2
-     * @return array
-     */
-    public static function combineArray($arr1, $arr2)
-    {
-        $result = array();
-        foreach ($arr1 as $item1) {
-            foreach ($arr2 as $item2) {
-                $tmp      = $item1;
-                $tmp[]    = $item2;
-                $result[] = $tmp;
-            }
-        }
-        return $result;
-    }
-
     public static function test()
     {
         echo 'test' . PHP_EOL;

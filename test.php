@@ -8,8 +8,6 @@
 
 namespace FbSmartAds;
 
-use Zend\Config\Writer\Json as WriterJson;
-
 class Util
 {
     /**
@@ -86,18 +84,17 @@ class Util
         $result = array();
         foreach ($arr1 as $item1) {
             foreach ($arr2 as $item2) {
-                $temp     = $item1;
-                $temp[]   = $item2;
-                $result[] = $temp;
+                $tmp      = $item1;
+                $tmp[]    = $item2;
+                $result[] = $tmp;
             }
         }
         return $result;
     }
 
-    public static function writeJsonConf($filename, $config)
+    public static function test()
     {
-        $writer = new WriterJson();
-        $writer->toFile($filename, $config, $exclusiveLock = true);
+        echo 'test' . PHP_EOL;
     }
 
 }
